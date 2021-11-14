@@ -4,6 +4,7 @@ import { Route, Switch, Redirect, BrowserRouter, Link } from 'react-router-dom'
 import logo from './logo.svg'
 import './App.css'
 import Home from './components/Home'
+import AddUser from './components/AddUser'
 
 
 class App extends Component {
@@ -12,7 +13,7 @@ class App extends Component {
             <div className="App">
                 <header className="App-header">
                     <img src={logo} className="App-logo" alt="logo" />
-                    <h1 className="App-title">Welcome to React Redux</h1>
+                    <h1 className="App-title">Welcome to ABC bank</h1>
                 </header>
                 <BrowserRouter>
                     <nav>
@@ -23,6 +24,7 @@ class App extends Component {
                     </nav>
                     <Switch>
                         <Route exact path='/home' component={Home} />
+                        <Route exact path='/adduser' component={AddUser} />
                         <Route render={() => (<Redirect to={{ pathname: '/' }} />)} />
                     </Switch>
                 </BrowserRouter>

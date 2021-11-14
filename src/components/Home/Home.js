@@ -15,7 +15,7 @@ class Home extends Component {
     return (
       <div className="Home">
         <h1>Home page section</h1>
-        <button onClick={this.simpleAction}>Test redux action</button>
+        <button id="test-redux" onClick={this.simpleAction}>Test redux action</button>
         <pre>
           Value is: {this.props.btnClickValue}
         </pre>

@@ -1,5 +1,6 @@
 const initState = {
-  btnClickValue: ''
+  user: {},
+  btnClickValue: '',
 }
 
 const reducer = (state = initState, action) => {
@@ -7,7 +8,12 @@ const reducer = (state = initState, action) => {
     case 'SIMPLE_ACTION':
       return {
         ...state,
-        btnClickValue: action.payload
+        btnClickValue: state.user.firstName ? state.user.firstName : ''
+      }
+    case 'FORM_SUBMIT':
+      return {
+        ...state,
+        user: action.payload
       }
     default:
       return state
